@@ -13,7 +13,8 @@ class User():
                  last_name,
                  email, 
                  password, 
-                 username, 
+                 username,
+                 type, # type is either "student" or "educator"
                  user_id):
     
         self.first_name = first_name
@@ -22,6 +23,7 @@ class User():
         self.password = password
         self.username = username
         self.user_id = user_id
+        self.type = type
 
     def getUsername(self):
         return self.username
@@ -42,4 +44,13 @@ class User():
         else:
             self.login_status = False
 
+    def logOut(self):
+        self.login_status = False
+
+    def getType(self):
+        return self.type
     
+    # Debugging str
+
+    def __str__(self):
+        return "User: " + self.first_name + " " + self.last_name + " " + self.email + " " + self.password + " " + self.username + " " + self.type + " " + str(self.user_id)
