@@ -19,7 +19,7 @@ class User():
     - username: a string
     - type: a string, either "student" or "educator"
     - user_id: an integer
-    
+
     """
 
     def __init__(self,
