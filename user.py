@@ -25,20 +25,35 @@ class User():
         self.user_id = user_id
         self.type = type
 
-    def getUsername(self):
+    #accessor methods
+    def get_first_name(self):
+        return self.first_name
+    def get_last_name(self):
+        return self.last_name
+    def get_email(self):
+        return self.email
+
+    def get_username(self):
         return self.username
-    def getPassword(self):
+    def get_password(self):
         return self.password
-    def getLoginStatus(self):
+    def get_login_status(self):
         return self.login_status
+    def get_user_id(self):
+        return self.user_id
+    
+    #mutator methods
     def setusername(self, username):
         self.username = username
     def setpassword(self, password):
         self.password = password
+    
+    #verification 
     def VerifyLogin(self, username, password):
 
     # Might need to change the definition of this function to get the info 
     # from a database
+    #setting the login status 
         if self.username == username and self.password == password:
             self.login_status = True
         else:
